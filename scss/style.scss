@@ -1,0 +1,181 @@
+@import '_layout/_normalize';
+@import '_fonts';
+@import '_variables';
+@import '_layout/_layout';
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+body {
+	background: linear-gradient(to right, rgb(17, 153, 142), rgb(56, 239, 125));
+	font-size: 12px;
+}
+p{
+	margin: 0;
+}
+
+
+/* Layout */
+
+.ba-container {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 1200px;
+}
+
+
+/* Typography */
+
+a,
+input[type="submit"],
+input[type="button"],
+button {
+    transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button {
+    display: inline-block;
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.ba-button:hover {}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+    transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {}
+
+textarea {}
+
+.ba-title{
+	padding-top: 10px;
+	font-size: 35px;
+	margin: 0;
+	color: #fff; 
+	text-transform: uppercase;
+}
+
+.ba-card{
+	position: relative;
+	border-radius: 5px; 
+	perspective: 500px;
+
+	&-deck{
+		padding: 30px 0;
+		display: grid;
+		grid-template-columns: repeat(9, 1fr);
+		grid-template-rows: repeat(4, 200px);
+		grid-gap: 15px 10px;
+	}
+
+	&--hearts, &--diams{
+		color: red;
+	}
+
+	&__front, &__back{
+		padding: 6px;
+		border-radius: 5px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		transition: transform .5s ease-in-out;
+	}
+
+	&:hover{
+		cursor: pointer;
+		.ba-card {
+			&__front{
+				transform: rotateY(180deg);
+			}
+			&__back{
+				transform: rotateY(0);
+			}
+		}
+	}
+
+	&__front{
+		background: #fff; 
+		z-index: 1;
+		backface-visibility: hidden;
+
+		display: flex;
+	}
+
+	&__back{
+		background: url('../img/cover.jpg') center/cover no-repeat; 
+		transform: rotateY(-180deg);
+	}
+}
+
+.ba-face{
+	text-align: center;
+	
+	&__title{
+		font-size: 16px;
+	}
+
+	&__left, &__right{
+		flex-grow: 1;
+	}
+	&__center{
+		padding: 15px 0;
+		font-size: 18px;
+		flex-grow: 2;
+		
+		display: flex;
+		justify-content: space-around;
+		
+		&--right, &--left, &--mid{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+		&--mid{
+			justify-content: space-around;
+		}
+		&--big{
+			font-size: 30px;
+		}
+	}
+
+	&__right{
+		transform: rotate(-180deg);
+	    align-self:flex-end;
+	}
+}
+
+.ba-item{
+	&--rotate{
+		transform: rotate(180deg);
+	}
+}
+
+
+
+
