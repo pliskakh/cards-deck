@@ -671,6 +671,10 @@ select {
   color: red;
 }
 
+.ba-card--hearts svg, .ba-card--diams svg {
+  fill: currentColor;
+}
+
 .ba-card__front, .ba-card__back {
   padding: 6px;
   border-radius: 5px;
