@@ -608,7 +608,7 @@ h6 {
 }
 
 body {
-  background: linear-gradient(to right, #11998e, #38ef7d);
+  background: linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d);
   font-size: 12px;
   font-family: "Lato", sans-serif;
 }
@@ -668,10 +668,18 @@ select {
 }
 
 .ba-card--hearts, .ba-card--diams {
-  color: red;
+  color: #bc204b;
 }
 
 .ba-card--hearts svg, .ba-card--diams svg {
+  fill: currentColor;
+}
+
+.ba-card--spades, .ba-card--clubs {
+  color: #70C173;
+}
+
+.ba-card--spades svg, .ba-card--clubs svg {
   fill: currentColor;
 }
 

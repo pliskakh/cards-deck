@@ -13,7 +13,7 @@ h6 {
 }
 
 body {
-	background: linear-gradient(to right, rgb(17, 153, 142), rgb(56, 239, 125));
+	background: $bg;
 	font-size: 12px;
 	font-family: $font-main; 
 }
@@ -90,8 +90,14 @@ textarea {}
 	}
 
 	&--hearts, &--diams{
-		color: red;
+		color: #bc204b;
 		svg {
+			fill: currentColor;
+		}
+	}
+	&--spades, &--clubs{
+		color: #70C173;
+		svg{
 			fill: currentColor;
 		}
 	}
